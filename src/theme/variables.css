@@ -1,0 +1,126 @@
+/* For information on how to create your own theme, please see:
+http://ionicframework.com/docs/theming/ */
+
+.ios .ion-page{
+    --ion-background-color:#ccf8d2; /* พื้นหลังเขียวอ่อน */
+}
+
+.md .ion-page{
+    --background:#ccf8d2; /* พื้นหลังเขียวอ่อน */
+}
+
+:root {
+  /* Green Theme */
+  --ion-color-primary: #2e9d34; /* หัวข้อสีเขียว */
+  --ion-color-primary-rgb: 46, 157, 52;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #27892d;
+  --ion-color-primary-tint: #48b24e;
+
+  --ion-color-secondary: #a8e6b1;
+  --ion-color-secondary-rgb: 168, 230, 177;
+  --ion-color-secondary-contrast: #000000;
+  --ion-color-secondary-shade: #90c59a;
+  --ion-color-secondary-tint: #bdf0c6;
+
+  --ion-color-tertiary: #dfffe6;
+  --ion-color-tertiary-rgb: 223, 255, 230;
+  --ion-color-tertiary-contrast: #000000;
+  --ion-color-tertiary-shade: #c3e0ca;
+  --ion-color-tertiary-tint: #e9ffef;
+
+  /* พื้นหลัง */
+  --ion-background-color: #ccf8d2; /* พื้นหลังเขียวอ่อน */
+  --ion-text-color: #2f2f2f;
+
+  /* Shadow Variable ที่เพิ่ม */
+  --ion-box-shadow-color: rgba(0, 0, 0, 0.15);
+
+  /* Success/Warning/Danger */
+  --ion-color-success: #3bb54a;
+  --ion-color-warning: #ffcc00;
+  --ion-color-danger: #ff5b5b;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    --ion-background-color: #1a1a1a;
+    --ion-text-color: #eaeaea;
+    --ion-color-primary: #48b24e;
+  }
+}
+
+/* Global Style */
+body {
+  font-family: 'Prompt', sans-serif;
+  background-color: var(--ion-background-color);
+  color: var(--ion-text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Button */
+ion-button {
+  border-radius: 10px;
+  text-transform: none;
+  font-weight: 500;
+  background: var(--ion-color-primary);
+  color: var(--ion-color-primary-contrast);
+  transition: all 0.2s;
+}
+
+ion-button:hover {
+  background: var(--ion-color-secondary);
+  transform: translateY(-2px);
+}
+
+/* List */
+ion-list ion-item {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: var(--ion-color-tertiary);
+  transition: 0.2s;
+}
+
+ion-list ion-item:hover {
+  background: var(--ion-color-secondary-tint);
+  box-shadow: 0 4px 10px var(--ion-box-shadow-color);
+  transform: translateY(-1px);
+}
+
+/* Toolbar (Header) */
+ion-toolbar {
+  --background: var(--ion-color-primary); /* หัวข้อเขียว */
+  --color: var(--ion-color-primary-contrast);
+}
+
+/* Item text */
+ion-item {
+  --color: #1b1b1b;
+}
+
+ion-label {
+  --color: #1b1b1b;
+}
+
+/* ✅ เมื่อคลิกหรือแตะรายการ ให้ข้อความเป็นสีขาว */
+ion-item:active ion-label,
+ion-item.ion-activated ion-label {
+  color: #ffffff !important;
+}
+
+/* ✅ เปลี่ยนพื้นหลัง Ion Item ตอนคลิกให้เป็นสีเขียว (ตามธีม) */
+ion-item:active,
+ion-item.ion-activated {
+  --background: var(--ion-color-primary) !important;
+  transition: 0.15s;
+}
+
+
+ion-back-button {
+  color:#fff; !important;
+  --color-focused: #fff;
+  --color-hover: #fff;
+}
+
